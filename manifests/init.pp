@@ -1,4 +1,4 @@
-class vxlangw (
+class n1k-vxlangw (
     $gw_isoimage,
     $os_password,
     $controller_ip)
@@ -12,6 +12,6 @@ class vxlangw (
   $dirpath = "/var/spool/vxlangw/"
   $isopath = "/etc/vxlangw/$b"
 
-  include vxlangw::deploy
+  include n1k-vxlangw::deploy
 
 }
