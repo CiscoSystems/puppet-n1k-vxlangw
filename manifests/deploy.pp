@@ -1,4 +1,4 @@
-class vxlangw::deploy {
+class n1k-vxlangw::deploy {
 
   file { '/etc/vxlangw':
          owner => 'root',
