@@ -1,4 +1,4 @@
-class vxlangw (
+class n1k-vxlangw (
     $gw_isoimage,
     $os_password,
     $controller_ip)
