@@ -12,6 +12,6 @@ class n1k-vxlangw (
   $dirpath = "/var/spool/vxlangw/"
   $isopath = "/etc/vxlangw/$b"
 
-  include vxlangw::deploy
+  include n1k-vxlangw::deploy
 
 }
