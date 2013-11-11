@@ -32,7 +32,7 @@ define n1k-vxlangw (
   $qcowpath = "/etc/vxlangw/$b"
   $image_name = regsubst($b,'.disk1','')
   exec {"add_glance":
-        command => "/usr/bin/glance image-create --name=$image_name --is-public=true --property hw_vif_model=e1000 --property hw_disk_bus=ide --property hw_cdrom_bus=ide --container-format=ovf --disk-format=qcow2 < $qcowpath",
+        command => "/usr/bin/glance image-create --name=$image_name --is-public=true --property hw_vif_model=virtio --property hw_disk_bus=ide --property hw_cdrom_bus=ide --container-format=ovf --disk-format=qcow2 < $qcowpath",
         environment => ["OS_USERNAME=admin","OS_TENANT_NAME=admin","OS_PASSWORD=$os_password","OS_AUTH_URL=http://$controller_ip:5000/v2.0/"],
         unless => "/usr/bin/glance index | grep -c $image_name",
   }
